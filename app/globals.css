@@ -3,12 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent-color: #1ABC9C;
+  --accent2-color: #E74C3C;
+  --accent3-color: #2ECC71;
+  --accent4-color: #F39C12;
+  --primary-color: #3498DB;
+  --dark-text-color: #2C3E50;
+  --gray-text-color: #7F8C8D;
+  --button-padding-x: 18px;
+  --button-padding-y: 12px;
+  --font-family-body: &#x27;
+  --light-text-color: #FFFFFF;
+  --dark-border-color: #2C3E50;
+  --light-border-color: #BDC3C7;
+  --font-family-heading: &#x27;
+  --button-rounded-radius: 8px;
+  --dark-background-color: #34495E;
   --light-background-color: #F2F4F6;
+  --medium-background-color: #AEB6BF;
+  --primary-button-bg-color: #2980B9;
+  --primary-button-text-color: #FFFFFF;
+  --secondary-button-bg-color: #ECF0F1;
+  --secondary-button-text-color: #2C3E50;
+  --primary-button-hover-bg-color: #1A5276;
+  --primary-button-hover-text-color: #FFFFFF;
+  --secondary-button-hover-bg-color: #D6DBDF;
+  --secondary-button-hover-text-color: #34495E;
 }
 
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url('./assets/images/hero-bg.webp');
 }
