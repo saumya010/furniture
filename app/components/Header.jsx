@@ -23,7 +23,7 @@ const Header = () => {
             aria-label="Navigation Menu"
           >
             <i
-              className="fa-regular fa-bars feather feather-menu"
+              className="fa-solid fa-bars feather feather-menu"
               aria-hidden="true"
             ></i>
           </button>
