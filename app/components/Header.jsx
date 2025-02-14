@@ -45,7 +45,7 @@ const Header = () => {
                   >
                     <span>Products</span>
                     <i
-                      className="fa-regular fa-chevron-down ml-1 transition-['rotate'] lg:group-hover:rotate-[180deg]"
+                      className="fa-solid fa-chevron-down ml-1 transition-['rotate'] lg:group-hover:rotate-[180deg]"
                       aria-hidden="true"
                     ></i>
                   </button>
