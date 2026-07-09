@@ -40,16 +40,16 @@ const Footer = () => {
           </div>
           <div className="mb-8 space-y-3">
             <div className="flex items-center justify-center space-x-2 text-sm">
-              <a href="/about-us">About Us</a>
+              <a href="#about">About Us</a>
             </div>
             <div className="flex items-center justify-center space-x-2 text-sm">
-              <a href="/products">Products</a>
+              <a href="#gallery">Products</a>
             </div>
             <div className="flex items-center justify-center space-x-2 text-sm">
-              <a href="/customization">Customization</a>
+              <a href="#contact">Customization</a>
             </div>
             <div className="flex items-center justify-center space-x-2 text-sm">
-              <a href="/made-in-usa">Made in the USA</a>
+              <a href="#about">Made in the USA</a>
             </div>
           </div>
           <div className="mb-8 space-y-3">
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="py-12 text-center text-sm">
-        © 2025 Home Comforts, All Rights Reserved
+        © {new Date().getFullYear()} Home Comforts, All Rights Reserved
       </p>
     </footer>
   );

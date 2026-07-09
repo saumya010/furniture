@@ -4,7 +4,7 @@ import AboutImage from "../assets/images/furniture-about.webp";
 
 const About = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-8" id="about">
       <div className="container mx-auto px-6 pt-12 md:mt-2 md:pt-12">
         <div className="flex flex-col items-stretch lg:flex-row">
           <div className="relative lg:w-1/2 xl:w-1/3">
@@ -45,7 +45,7 @@ const About = () => {
             </ul>
             <div className="flex justify-center md:block">
               <a
-                href="/products"
+                href="#gallery"
                 className="mb-12 inline-block rounded bg-[var(--primary-button-bg-color)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] text-lg font-medium text-[var(--primary-button-text-color)] hover:bg-[var(--primary-button-hover-bg-color)] hover:text-[var(--primary-button-hover-text-color)]"
               >
                 Discover Our Customization Options

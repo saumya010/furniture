@@ -1,8 +1,35 @@
-import React from "react";
+"use client";
+
+import { useState } from "react";
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [sent, setSent] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(
+      `Customization inquiry from ${form.firstName} ${form.lastName}`.trim()
+    );
+    const body = encodeURIComponent(
+      `Name: ${form.firstName} ${form.lastName}\nEmail: ${form.email}\nPhone: ${form.phone}\n\n${form.message}`
+    );
+    window.location.href = `mailto:info@luxuryinteriors.com?subject=${subject}&body=${body}`;
+    setSent(true);
+  };
+
   return (
-    <section className="code-section" id="sumxbr">
+    <section className="code-section" id="contact">
       <div className="mx-auto px-4 py-20 lg:container sm:px-12 xl:px-32">
         <div className="relative z-10 rounded-3xl bg-[#ffffff] p-6 shadow-[0_0_25px_rgba(0,0,0,0.1)]">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
@@ -55,7 +82,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full p-6">
-              <form data-landingsite-contact-form="">
+              <form onSubmit={handleSubmit}>
                 <div className="flex flex-col space-y-4 md:space-y-12">
                   <div className="flex flex-col space-y-4 md:flex-row md:space-x-8 md:space-y-0">
                     <div className="w-full">
@@ -69,8 +96,12 @@ const Contact = () => {
                       </div>
                       <div>
                         <input
-                          name="first-name"
+                          id="first-name"
+                          name="firstName"
                           type="text"
+                          required
+                          value={form.firstName}
+                          onChange={handleChange}
                           className="w-full border border-[#ffffff] border-b-[var(--light-border-color)] p-2"
                         />
                       </div>
@@ -86,8 +117,12 @@ const Contact = () => {
                       </div>
                       <div>
                         <input
-                          name="last-name"
+                          id="last-name"
+                          name="lastName"
                           type="text"
+                          required
+                          value={form.lastName}
+                          onChange={handleChange}
                           className="w-full border border-[#ffffff] border-b-[var(--light-border-color)] p-2"
                         />
                       </div>
@@ -105,8 +140,12 @@ const Contact = () => {
                       </div>
                       <div>
                         <input
+                          id="email"
                           type="email"
                           name="email"
+                          required
+                          value={form.email}
+                          onChange={handleChange}
                           className="w-full border border-[#ffffff] border-b-[var(--light-border-color)] p-2"
                         />
                       </div>
@@ -122,8 +161,11 @@ const Contact = () => {
                       </div>
                       <div>
                         <input
-                          type="phone"
+                          id="phone"
+                          type="tel"
                           name="phone"
+                          value={form.phone}
+                          onChange={handleChange}
                           className="w-full border border-[#ffffff] border-b-[var(--light-border-color)] p-2"
                         />
                       </div>
@@ -140,8 +182,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <textarea
+                        id="message"
                         name="message"
                         rows="4"
+                        required
+                        value={form.message}
+                        onChange={handleChange}
                         className="w-full border border-[#ffffff] border-b-[var(--light-border-color)] p-2"
                       ></textarea>
                     </div>
@@ -153,6 +199,11 @@ const Contact = () => {
                     >
                       Start Your Customization Journey
                     </button>
+                    {sent && (
+                      <p className="mt-3 text-sm text-[var(--dark-text-color)]">
+                        Your email app should have opened with this message ready to send.
+                      </p>
+                    )}
                   </div>
                 </div>
               </form>

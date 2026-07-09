@@ -30,7 +30,7 @@ const Item = ({ image, title, description }) => {
 
 const Gallery = () => {
   return (
-    <section className="code-section" id="snu8f5j">
+    <section className="code-section" id="gallery">
       <div className="container mx-auto px-6 md:pt-24">
         <div className="mb-12 text-3xl font-semibold [font-family:var(--font-family-heading)] md:text-5xl">
           Our Exquisite Gallery

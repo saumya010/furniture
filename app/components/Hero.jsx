@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       className="relative flex h-[700px] w-full px-6 pt-48 text-center md:px-12 lg:px-24 xl:px-52 code-section"
-      id="snlmsb"
+      id="hero"
     >
       <div
         className="absolute inset-0 h-full w-full bg-cover bg-center object-cover brightness-75 hero-image"
@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
           <div>
             <a
-              href="/products"
+              href="#gallery"
               className="inline-block rounded bg-[var(--primary-button-bg-color)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] text-sm font-semibold text-[var(--primary-button-text-color)] hover:bg-[var(--primary-button-hover-bg-color)]"
             >
               <span>Explore Our Collection</span>

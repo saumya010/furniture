@@ -12,11 +12,11 @@
   --gray-text-color: #7F8C8D;
   --button-padding-x: 18px;
   --button-padding-y: 12px;
-  --font-family-body: &#x27;
+  --font-family-body: var(--font-inter), Arial, Helvetica, sans-serif;
   --light-text-color: #FFFFFF;
   --dark-border-color: #2C3E50;
   --light-border-color: #BDC3C7;
-  --font-family-heading: &#x27;
+  --font-family-heading: var(--font-playfair-display), Georgia, serif;
   --button-rounded-radius: 8px;
   --dark-background-color: #34495E;
   --light-background-color: #F2F4F6;
@@ -40,8 +40,16 @@ strong {
   font-weight: bolder;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-body);
 }
 
 .hero-image {

@@ -63,7 +63,7 @@ const Testimonials = () => {
   return (
     <section
       className="bg-gradient-to-b from-[var(--light-background-color)] code-section"
-      id="sghjl9c"
+      id="testimonials"
     >
       <div className="container mx-auto mt-8 px-6 pb-12 pt-8 md:mt-20 md:pb-24 md:pt-20">
         <div className="mb-3 text-center text-3xl font-semibold [font-family:var(--font-family-heading)] md:text-5xl">
